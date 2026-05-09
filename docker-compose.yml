@@ -481,8 +481,8 @@ services:
     image: ${IMAGE_NAME}:${DEMO_VERSION}-product-catalog
     container_name: product-catalog
     build:
-      context: ./
-      dockerfile: ${PRODUCT_CATALOG_DOCKERFILE}
+      context: ./src/product-catalog
+      dockerfile: Dockerfile
       cache_from:
         - ${IMAGE_NAME}:${IMAGE_VERSION}-product-catalog
     deploy:
